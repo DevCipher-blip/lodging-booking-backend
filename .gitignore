@@ -139,3 +139,13 @@ GitHub.sublime-settings
 
 /documents
 /staticfiles/
+
+# Local environments and generated files
+.venv/
+project_venv/
+node_modules/
+__pycache__/
+.env.*
+!.env.example
+!.env.sample
+.DS_Store

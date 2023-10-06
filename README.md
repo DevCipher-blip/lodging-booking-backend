@@ -1,11 +1,19 @@
+# Role-based client and customer backend
+
+## Start at the account boundary
+
+The account API distinguishes administrative, client, and customer operations. [accounts/views.py](accounts/views.py) applies the view-level checks, and [accounts/serializers.py](accounts/serializers.py) owns password and field validation.
+
+Review ownership checks and first-login/password-change behavior with separate accounts before extending the API. The current source generates a random temporary password when needed; a usable onboarding flow also needs a deliberate way to deliver or reset access. Historical predictable-password code is not evidence that the current flow still uses it.
+
 Here's a `README.md` file tailored for your Django project, including the directory structure, installation instructions, and PostgreSQL database setup.
 
 ```markdown
-# BnBU Backend API
+## BnBU Backend API
 
 A Django-based backend API for managing user accounts with custom user types.
 
-## Directory Structure
+### Directory Structure
 
 ```plaintext
 bnbu_backend_api/
@@ -37,16 +45,16 @@ bnbu_backend_api/
 └── .env                       # Environment variables
 ```
 
-## Installation and Setup
+### Installation and Setup
 
-### Prerequisites
+#### Prerequisites
 
 - Python 3.11.10
 - PostgreSQL Database
 - Django
 - Virtual Environment (recommended)
 
-### Steps
+#### Steps
 
 1. **Clone the repository**
 
@@ -138,7 +146,7 @@ bnbu_backend_api/
 
    Open your browser and navigate to `http://127.0.0.1:8000/account/` to access the API.
 
-## Usage
+### Usage
 
 You can interact with the API through the following endpoints:
 
